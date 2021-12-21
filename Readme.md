@@ -24,17 +24,21 @@ State changes happen via firebase and protocol buffers
 **Request**
 
 ```
+
 curl -H 'Host: ota.rabbitair.com' -H 'Content-Type: application/json' -H 'Accept: */*' -H 'User-Agent: rabbitair-ios-app/1.1.8 (com.rabbitair.ios; build:197; iOS 15.1.0) Alamofire/5.2.1' -H 'Accept-Language: en-US;q=1.0, pt-PT;q=0.9' --data-binary '{"email":"YOUR_USERNAME","password":"YOUR_PASSWORD"}' --compressed 'https://ota.rabbitair.com/restapi/null/users/login_by_pass'
+
 ```
 
 **Response**
 
-``` {
+```
+{
 	"token": "some_token", // Used in url from here on
 	"userName": "Sometime",
 	"tpCst": "shopify",
 	"shopifyToken": "shopify_token"
-} ```
+}
+```
 
 
 ### Location List
@@ -94,12 +98,16 @@ curl -H 'Host: ota.rabbitair.com' -H 'Content-Type: application/json' -H 'Accept
 	}]
 }
 ```
+
+
 ### Update AWS Token
 
 **Request**
 
+
 ```
 curl -H 'Host: ota.rabbitair.com' -H 'Content-Type: application/json' -H 'Accept: */*' -H 'User-Agent: rabbitair-ios-app/1.1.8 (com.rabbitair.ios; build:197; iOS 15.1.0) Alamofire/5.2.1' -H 'Accept-Language: en-US;q=1.0, pt-PT;q=0.9' --data-binary '{"options":""}' --compressed 'https://ota.rabbitair.com/restapi/some_token/users/update_aws_token'
+
 ```
 
 **Response**
@@ -119,6 +127,7 @@ curl -H 'Host: ota.rabbitair.com' -H 'Content-Type: application/json' -H 'Accept
 
 ```
 curl -H 'Host: ota.rabbitair.com' -H 'Content-Type: application/json' -H 'Accept: */*' -H 'User-Agent: rabbitair-ios-app/1.1.8 (com.rabbitair.ios; build:197; iOS 15.1.0) Alamofire/5.2.1' -H 'Accept-Language: en-US;q=1.0, pt-PT;q=0.9' --data-binary '{"firebase_token":"asdfsadf","email":"blah@example.com"}' --compressed 'https://ota.rabbitair.com/restapi/some_token/users/setUserFirebaseToken'
+
 ```
 
 **Response**
@@ -154,6 +163,7 @@ curl -H 'Host: ota.rabbitair.com' -H 'Content-Type: application/json' -H 'Accept
 	},
 	"ok": 1
 }
+
 ```
 
 
@@ -284,8 +294,10 @@ curl -H 'Host: ota.rabbitair.com' -H 'Content-Type: application/json' -H 'Accept
 ### Rabbit Air Wireless
 
 ```
+
 data : "Rabbit Air Wireless Data"
 id
+
 ```
 
 ### Rabbit Air Wireless Data
